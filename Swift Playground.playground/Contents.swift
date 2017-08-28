@@ -78,14 +78,41 @@ let full = 5
 let double = 5.2
 let float : Float = 5.6
 
-let sumInt = full + Int(double) + Int(float)
+let sumInt = Int(Double(full) + double + Double(float))
 let sumFloat = Float(full) + Float(double) + float
 let sumDouble = Double(full) + double + Double(float)
 
-if (Double(sumInt) < sumDouble) {
+if Double(sumInt) < sumDouble {
     print("Double")
 }
 else {
     print("WTF?!")
 }
+
+print("\nLesson 3: 'Tuples'")
+
+let tuples = (1, "Hello, World", 5.6, true)
+
+var (_, _, _, _) = tuples
+
+tuples.2
+
+let newTuples = (index:1, text:"Hello, world", registered:true, lenght: 5.6)
+
+newTuples.index
+
+var trainTuples = (pushups:20, pullups:100, situps:100)
+
+print("\(trainTuples)")
+
+print("\nПодтягивания: \(trainTuples.pullups) - \(type(of: trainTuples.pullups))\nОтжимания: \(trainTuples.pushups) - \(type(of: trainTuples.pullups))\nПриседания: \(trainTuples.situps) - \(type(of: trainTuples.situps))")
+
+let temp : Int
+
+temp = trainTuples.pushups
+trainTuples.pushups = trainTuples.pullups
+trainTuples.pullups = temp
+
+print("\nПодтягивания: \(trainTuples.pullups) - \(type(of: trainTuples.pullups))\nОтжимания: \(trainTuples.pushups) - \(type(of: trainTuples.pullups))\nПриседания: \(trainTuples.situps) - \(type(of: trainTuples.situps))")
+
 

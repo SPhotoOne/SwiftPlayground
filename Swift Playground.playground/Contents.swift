@@ -116,3 +116,29 @@ trainTuples.pullups = temp
 print("\nПодтягивания: \(trainTuples.pullups) - \(type(of: trainTuples.pullups))\nОтжимания: \(trainTuples.pushups) - \(type(of: trainTuples.pullups))\nПриседания: \(trainTuples.situps) - \(type(of: trainTuples.situps))")
 
 
+print("\nLesson 4: 'optional values'")
+
+var apples : Int? = 5 //условие,при котором int может стать nil (null)
+
+//apples = nil
+
+if apples == nil {
+    print("nil")
+} else {
+    apples = apples! + 2
+}
+
+if var check = apples {
+    check = check + 2
+} else {
+print("nil check")
+}
+
+let age = "60"
+
+var ageInt = Int(age)
+
+if ageInt != nil {
+    let ageNumber = ageInt!
+    print("\(type(of: ageNumber))")
+}

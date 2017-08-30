@@ -1,3 +1,7 @@
+//var - переменные
+//let - константы
+
+
 print("Lesson 1")
 
 let redColor = "red" //константа
@@ -138,7 +142,160 @@ let age = "60"
 
 var ageInt = Int(age)
 
+type(of: ageInt)
+
 if ageInt != nil {
     let ageNumber = ageInt!
     print("\(type(of: ageNumber))")
+}
+
+var apples2 : Int! = nil
+
+apples2 = 2
+
+apples2 = apples2 + 5
+
+var inputTuples = (int: 60, string: "60", message: "Hello", messAndInt: "1 love you", string2: "2")
+
+var result = 0
+
+if Int?(inputTuples.0) != nil
+{
+   result = result + Int(inputTuples.0)
+    print("inputTuples.0 - int, result = \(result)")
+}
+    else
+{
+    print("inputTuples.0 is not veriable")
+}
+
+if Int(inputTuples.1) != nil
+{
+    result = result + Int(inputTuples.1)!
+    print("inputTuples.0 - int, result = \(result)")
+}
+    else
+{
+    print("inputTuples.1 is not veriable")
+}
+
+if Int(inputTuples.2) != nil {
+    result = result + Int(inputTuples.2)!
+    print("inputTuples.2 - int, result = \(result)")
+}
+    else
+{
+    print("inputTuples.2is not veriable")
+}
+
+if Int(inputTuples.3) != nil {
+    result = result + Int(inputTuples.3)!
+    print("inputTuples.3 - int, result = \(result)")
+}
+    else
+{
+    print("inputTuples.3 is not veriable")
+}
+
+if Int(inputTuples.4) != nil {
+    result = result + Int(inputTuples.4)!
+    print("inputTuples.3 - int, result = \(result)")
+}
+else
+{
+    print("inputTuples.3 is not veriable")
+}
+
+
+var paramTuple : (statusCode: Int, message: String?, errorMessage: String?) = (202, "Your e-mail send", nil)
+
+if paramTuple.statusCode > 200 {
+    if paramTuple.statusCode < 300 {
+        print(paramTuple.message!)
+    }
+}
+    else
+{
+    paramTuple.errorMessage = "Send message failed"
+    print(paramTuple.errorMessage!)
+}
+
+var paramTuples : (message: String?, errorMessage: String?) = ("Hello", nil)
+
+if paramTuples.message != nil {
+    if paramTuples.errorMessage == nil {
+        print("\(paramTuples.message!) - this have anymore, but errorMessage - not have")
+    }
+}
+else
+{
+    print("\(paramTuples.errorMessage!) - this hae anymore")
+}
+
+var studentTuple1 : (name: String, carNumber: String?, value: Int?)
+var studentTuple2 : (name: String, carNumber: String?, value: Int?)
+var studentTuple3 : (name: String, carNumber: String?, value: Int?)
+var studentTuple4 : (name: String, carNumber: String?, value: Int?)
+var studentTuple5 : (name: String, carNumber: String?, value: Int?)
+
+studentTuple1.name = "Иван"
+studentTuple2.name = "Петр"
+studentTuple3.name = "Мария"
+studentTuple4.name = "Александр"
+studentTuple5.name = "Анна"
+
+studentTuple1.carNumber = "e261tx"
+studentTuple2.carNumber = nil
+studentTuple3.carNumber = nil
+studentTuple4.carNumber = "e643mx"
+studentTuple5.carNumber = "p314ec"
+
+studentTuple1.value = 4
+studentTuple2.value = 5
+studentTuple3.value = 3
+studentTuple4.value = 2
+studentTuple5.value = nil
+
+
+if studentTuple2.carNumber != nil {
+    if studentTuple2.value != nil {
+        print("Имя студента: \(studentTuple2.name)\n"
+        + "Номер авто: \(studentTuple2.carNumber!)\n"
+        + "Оценка за контрольную: \(studentTuple2.value!)\n")
+    }
+    else {
+        print("Имя студента: \(studentTuple2.name)\n"
+            + "Номер авто: \(studentTuple2.carNumber!)\n"
+        + "студента на контрольной не было\n")
+    }
+}
+else
+{
+    if studentTuple2.value != nil {
+        print("Имя студента: \(studentTuple2.name)\n"
+            + "Номер авто: авто не имеется\n"
+            + "Оценка за контрольную: \(studentTuple2.value!)\n")
+    }
+}
+
+if studentTuple4.carNumber != nil {
+    if studentTuple4.value != nil {
+        print("Имя студента: \(studentTuple4.name)\n"
+            + "Номер авто: \(studentTuple4.carNumber!)\n"
+            + "Оценка за контрольную: \(studentTuple4.value!)\n")
+    }
+    else {
+        print("Имя студента: \(studentTuple4.name)\n"
+            + "Номер авто: \(studentTuple4.carNumber!)\n"
+            + "студента на контрольной не было\n")
+    }
+}
+else
+{
+    if studentTuple4.value != nil {
+        print("Имя студента: \(studentTuple4.name)\n"
+            + "Номер авто: авто не имеется\n"
+            + "Оценка за контрольную: \(studentTuple4.value!)\n")
+    }
+
 }

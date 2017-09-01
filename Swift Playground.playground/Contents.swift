@@ -65,7 +65,7 @@ typealias typeAI = Int
 let a : typeAI = 5
 let b = 3.2
 
-let c = a + typeAI(b)
+//let c = a + typeAI(b)
 
 let d = true
 
@@ -209,7 +209,7 @@ else
 
 var paramTuple : (statusCode: Int, message: String?, errorMessage: String?) = (202, "Your e-mail send", nil)
 
-if paramTuple.statusCode > 200 {
+if paramTuple.statusCode >= 200 {
     if paramTuple.statusCode < 300 {
         print(paramTuple.message!)
     }
@@ -269,14 +269,11 @@ if studentTuple2.carNumber != nil {
         + "студента на контрольной не было\n")
     }
 }
-else
-{
-    if studentTuple2.value != nil {
+else if studentTuple2.value != nil {
         print("Имя студента: \(studentTuple2.name)\n"
             + "Номер авто: авто не имеется\n"
             + "Оценка за контрольную: \(studentTuple2.value!)\n")
     }
-}
 
 if studentTuple4.carNumber != nil {
     if studentTuple4.value != nil {
@@ -290,12 +287,57 @@ if studentTuple4.carNumber != nil {
             + "студента на контрольной не было\n")
     }
 }
-else
-{
-    if studentTuple4.value != nil {
+else if studentTuple4.value != nil {
         print("Имя студента: \(studentTuple4.name)\n"
             + "Номер авто: авто не имеется\n"
             + "Оценка за контрольную: \(studentTuple4.value!)\n")
     }
 
+print("Lesson 5: 'Basic operators'")
+
+var small : UInt8 = 0xff
+
+small = small &+ 5 //переполнение
+
+var text = "123"
+
+var intText = Int(text)
+
+var c : Int
+
+//if intText != nil {
+//    c = intText!
+//} else {
+//    c=0
+//} unwrapped
+
+//if let opt = intText {
+//    c = opt
+//} else {
+//    c = 0
+//}  optional binding
+
+c = intText ?? 0 //то же самое, что и условие if intText != nil {print intText}else{print 0}
+
+var summa = 5
+summa += 1
+
+var mySept = 19
+
+var oneMinute = 60
+var hour = 60 * oneMinute
+var day = 24 * hour
+
+var dayOfMyBirthday = 31+28+31+28+31+30+31+31+30 + mySept
+
+
+var secondOfMyBirthday = day * (31+28+31+28+31+30+31+31+30 + mySept)
+
+var table = (x:1, y:2)
+
+
+if table.x % 2 == table.y % 2 {
+    print("Эта клетка черная")
+} else {
+    print("Эта клетка белая")
 }
